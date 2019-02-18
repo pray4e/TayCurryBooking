@@ -1,0 +1,14 @@
+<div class="figure"><img src="/assets/IMG/a1.PNG" alt="TayLogo" width="400"></div>
+<div class="content">
+  <div class="form-line">
+    <input type="text" placeholder="Username" [(ngModel)]="Username">
+  </div>
+  <div class="form-line">
+    <input type="password" placeholder="password" [(ngModel)]="password">
+  </div>
+</div>
+<div class="actions">
+  <button class="cta" 
+  [disabled]="disableButton"
+  (click)="submitCredentials()">Go! </button>
+</div>
