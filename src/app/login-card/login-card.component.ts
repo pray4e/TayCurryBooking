@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login-card',
@@ -10,7 +11,7 @@ export class LoginCardComponent implements OnInit {
   private Username='';
   private password='';
 
-  constructor() { }
+  constructor(private http: HttpClient ) { }
 
   ngOnInit() {
   }

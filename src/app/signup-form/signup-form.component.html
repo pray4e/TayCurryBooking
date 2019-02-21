@@ -1,0 +1,18 @@
+<div class="figure"><img src="/assets/IMG/a1.PNG" alt="TayLogo" width="400"></div>
+<h3>Credentials</h3>
+<div class="content">
+  <div class="form-line">
+    <input type="text" placeholder="Name" [(ngModel)]="Name">
+  </div>
+  <div class="form-line">
+    <input type="text" placeholder="Email" [(ngModel)]="Email">
+  </div>
+  <div class="form-line">
+    <input type="text" placeholder="Instagram" [(ngModel)]="Instagram">
+  </div>
+  <div class="actions">
+    <button class="cta"
+    [disabled]="disableButton"
+  (click)="submitCredentials()">Welcome 💜 </button>
+  </div>
+</div>
