@@ -1,20 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login-card',
   templateUrl: './login-card.component.html',
   styleUrls: ['./login-card.component.css']
 })
+
+
 export class LoginCardComponent implements OnInit {
 
   private Username='';
   private password='';
 
-  constructor(private http: HttpClient ) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
+
+  signInWithFacebook() {
+    this.authService.signInWithFacebook()
+    .then((res) => { 
+        this.router.navigate([''])
+      })
+    .catch((err) => console.log(err));
+  }
+
+
   // Disable Go button when there is no value 
   get disableButton(){
     return this.Username.length === 0 ||

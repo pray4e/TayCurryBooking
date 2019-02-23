@@ -8,11 +8,14 @@
     <input type="text" placeholder="Email" [(ngModel)]="Email">
   </div>
   <div class="form-line">
+    <input type="password" placeholder="PassWord" [(ngModel)]="PassWord">
+  </div>
+  <div class="form-line">
     <input type="text" placeholder="Instagram" [(ngModel)]="Instagram">
   </div>
   <div class="actions">
     <button class="cta"
-    [disabled]="disableButton"
+    
   (click)="submitCredentials()">Welcome 💜 </button>
   </div>
 </div>
